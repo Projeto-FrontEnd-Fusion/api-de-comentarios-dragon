@@ -1,0 +1,22 @@
+{
+	"name": "api-de-comentarios-dragon",
+	"version": "1.0.0",
+	"description": "- **Node.js**: Plataforma backend para construir a lógica da API.\r - **Express.js**: Framework para criação de rotas e controle das requisições HTTP.\r - **Mongoose (ou outro ORM)**: Para modelar os dados e facilitar a interação com o MongoDB.\r - **MongoDB**: Banco de dados NoSQL para armazenar os comentários enviados pelo formulário.",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start:dev": "tsx watch ./src/server.ts"
+	},
+	"keywords": [],
+	"author": "Filipe Dias",
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.3",
+		"@types/express": "^5.0.0",
+		"tsx": "^4.19.1",
+		"typescript": "^5.6.2"
+	},
+	"dependencies": {
+		"express": "^4.21.0"
+	}
+}
