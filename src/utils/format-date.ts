@@ -11,4 +11,3 @@ export function formatData(date: Date) {
 
 	return date.toLocaleString('pt-BR', options).replace(',', '')
 }
-formatData(new Date())

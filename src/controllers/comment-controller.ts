@@ -13,6 +13,16 @@ class Comment {
 		const data = await Comments.create(comment)
 		res.status(201).json({ create: 'success', data })
 	}
+
+	async getAll(_req: Request, res: Response) {
+		try {
+			const comments = await Comments.getAll()
+			res.status(200).json({ comments })
+		} catch (error) {
+			console.error('Error retrieving comments:', error)
+			res.status(500).json({ message: 'Erro ao buscar comentários' })
+		}
+	}
 }
 
 export default new Comment()

@@ -23,6 +23,21 @@ class Comments {
 			throw error
 		}
 	}
+
+	async getAll() {
+		try {
+			const database = client.db('Comments')
+			await createDatabase(database)
+
+			const collection = database.collection('comments')
+			const comments = await collection.find().toArray()
+
+			return comments
+		} catch (error) {
+			console.error('Error retrieving comments:', error)
+			throw error
+		}
+	}
 }
 
 export default new Comments()
